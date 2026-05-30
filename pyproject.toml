@@ -1,0 +1,11 @@
+[project]
+name = "automated_data_pipelines"
+version = "0.1.0"
+description = "Automated Data Pipelines"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=3.0.3",
+    "plotly>=6.7.0",
+    "prefect>=3.7.1",
+]
