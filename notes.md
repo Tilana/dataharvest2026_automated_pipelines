@@ -6,10 +6,9 @@ paginate: true
 
 # From Data Projects to Pipelines
 
-29th of May 2026 @ Dataharvest
+30th of May 2026 @ Dataharvest
 
 Natalie Widmann
-natalie_widmann@posteo.net
 
 ---
 
@@ -126,6 +125,7 @@ The key benefit: once a deployment is defined, it's easy to swith from running o
 ---
 
 # Hands-on: Prefect
+
 
 
 
@@ -275,6 +275,12 @@ main.serve(
     parameters={"max_value": 20},
 )
 
+
+---
+
+A file with all changes applied is given with `prefect_script.py`.
+
+Run it with `uv run python prefect_script.py`
 
 ---
 

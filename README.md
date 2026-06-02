@@ -56,11 +56,34 @@ uv run prefect server start
 Open localhost:4200 in your browser.
 
 
-### Run a script
+### From a python script to a Prfect workflow
+
+In `script.py` there is a simple script consisting of a few tasks:
+- generating a random number
+- saving the random number to a csv file
+- writing the data in a html chart
+
+
+Run the script multiple times to generate some numbers:
 
 ```
 uv run python script.py
 ```
+
+The script creates a `data` folder in the project directory. To view the graph open `./data/random_number.html` in your browser. After running the script, refresht the browser to see the updated chart.
+
+
+Now step by step we will change the script into a Prefect workflow. The details are listed in `notes.md`.
+The resulting script is called `prefect_script.py`.
+
+Run this with
+```
+uv run python prefect_script.py
+```
+
+In your dashboard you should see a new Prefect deployment and flow called `Random Numbers`. It's running once a minute and will automatically update the html chart.
+
+Some steps are included for demonstration purposes, e.g. an error above a certain threshold or the sleep for a few seconds.
 
 
 
